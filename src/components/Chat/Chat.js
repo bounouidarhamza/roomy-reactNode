@@ -20,10 +20,11 @@ const Chat = ({ location }) => {
  // const ENDPOINT = 'https://project-chat-application.herokuapp.com/';
   const ENDPOINT = 'https://roomy-nodereact-git-deploy-react.hbo.now.sh/';
 
+
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
 
-    socket = io(ENDPOINT);
+    socket = io(ENDPOINT, {transports: ['websocket']});
 
     setRoom(room);
     setName(name)
