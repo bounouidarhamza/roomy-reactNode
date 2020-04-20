@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "Roomy",
+    "name": "react-chat-with-node",
     "builds": [
         { "src": "package.json", "use": "@now/static-build" }
     ],
